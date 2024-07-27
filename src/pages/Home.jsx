@@ -10,8 +10,6 @@ function Home(){
         <Header/>
         <Banner/>
         <Post/>
-        <Post/>
-        <Post/>
         <Footer/>
         </div>
         </>
