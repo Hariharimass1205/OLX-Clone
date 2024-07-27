@@ -1,0 +1,61 @@
+.footerParentDiv {
+    width: 100%;
+  }
+
+  .footerParentDiv .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ebeeef;
+    padding: 46px;
+    font-size: 11px;
+  }
+
+  .footerParentDiv .content .heading {
+    font-size: 24px;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    
+  }
+  
+  .footerParentDiv .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #002f34;
+    color: whitesmoke;
+  }
+  
+  .footerParentDiv .footer p {
+    margin: 90px;
+    margin-bottom: 0px;
+    font-size: 13px;
+  }
+  .list ul li {
+    list-style: none;
+    font-weight: 200;
+    
+  }
+  .Footertopbox{
+
+    display: flex;
+   align-items: center; 
+   justify-content: center;
+  }
+  .drawline {
+    width: 1px;
+    background-color: black; /* You can change the color as needed */
+    height: 150px; /* Adjust the height as necessary */
+    margin: 0 20px; /* Adjust the margins to position the line properly */
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .gpay{
+    padding: 10px;
+  }
+  .gpay h2{
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
