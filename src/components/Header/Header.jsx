@@ -17,7 +17,7 @@ function Header(){
         </div>
         <div className="placeSearch">
           <Search/>
-          <input type="text"/>
+          <input type="text" placeholder='India'/>
           <Arrow/>
         </div>
         <div className="productSearch">

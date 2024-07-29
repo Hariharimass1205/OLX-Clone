@@ -11,7 +11,9 @@
     padding: 10px 16px 10px 16px;
   }
   
-  .bannerParentDiv .bannerChildDiv .menuBar span {
+ .menuBar  {
+  justify-content: center;
+  align-items: center;
   }
   
   .bannerParentDiv .bannerChildDiv .menuBar .categoryMenu span {
@@ -20,6 +22,8 @@
   }
   
   .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions {
+    font-weight: 300;
+    font-size: 14px;
   }
   .bannerParentDiv .bannerChildDiv .menuBar .otherQuickOptions span {
     padding: 10px;

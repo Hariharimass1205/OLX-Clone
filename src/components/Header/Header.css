@@ -35,7 +35,7 @@
   }
   
   .productSearch {
-    width: 35em;
+    width: 55em;
     height: 48px;
     border: 2px solid #002f34;
     border-radius: 4px;
@@ -52,6 +52,13 @@
     height: 100%;
     display: flex;
   }
+  .productSearch .input ::placeholder {
+    color: rgb(115, 110, 110);
+    opacity: 1; /* Firefox */
+    font-size: medium;
+    font-weight: 400;
+    
+  } 
   
   .productSearch .input input {
     border-color: transparent;
