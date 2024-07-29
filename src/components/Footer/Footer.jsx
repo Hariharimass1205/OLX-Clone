@@ -57,8 +57,7 @@ function Footer() {
             <ul>
               <li>About OLX Group</li>
               <li>Careers</li>
-              <li>Contact Us</li>
-              <li>OLXPeople</li>
+             
             </ul>
           </div>
         </div>
@@ -71,6 +70,7 @@ function Footer() {
               <li>Help</li>
               <li>Sitemap</li>
               <li>Legal & Privacy information</li>
+              <li>Vulnerability Disclosure Program</li>
             </ul>
           </div>
         </div>

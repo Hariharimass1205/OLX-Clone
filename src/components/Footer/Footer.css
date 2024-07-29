@@ -7,15 +7,16 @@
     justify-content: space-between;
     align-items: center;
     background: #ebeeef;
-    padding: 46px;
+    padding: 36px;
     font-size: 11px;
+    margin-left: 60px;
+    margin-right: 60px;
   }
 
   .footerParentDiv .content .heading {
     font-size: 24px;
     font-weight: bolder;
-    padding-bottom: 10px;
-    
+    padding-bottom: 10px;    
   }
   
   .footerParentDiv .footer {
