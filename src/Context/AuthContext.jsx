@@ -37,14 +37,18 @@ export const  AuthProvider=({children})=>{
               return { success: false };
             }
           };
+
           const logOut = async () => {
+    
             await signOut(auth);
+            
           };
 
         useEffect(() => {
             const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
               setUser(currentUser);
-            }); 
+            });
+        
             return () => {
               unsubscribe();
             };

@@ -6,8 +6,8 @@ import {
 } from "react-router-dom";
 import Login from './components/Login/Login';
 import Signup from './components/Sign/Signup';
-
 import { AuthProvider } from './Context/AuthContext';
+
 
 function App() {
 

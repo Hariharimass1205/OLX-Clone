@@ -7,8 +7,18 @@ import SellButton from '../../assets/SellButton.jsx'
 import SellButtonPlus from '../../assets/SellButtonPlus.jsx'
 import OlxLogo from '../../assets/OlxLogo.jsx';
 import AuthContext from '../../Context/AuthContext.jsx';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { auth } from '../../firebase.jsx';
 function Header(){
-  const { user } = useContext(AuthContext);
+  let navigate = useNavigate()
+  const { user,logOut } = useContext(AuthContext);
+  async function handleLogout(){
+    let res = await logOut()
+  } 
+  if (!user) {
+    navigate("/login");
+    return null;
+  }
  return(
     <>
     <div className="headerParentDiv">
@@ -37,7 +47,7 @@ function Header(){
           <Arrow></Arrow>
         </div>
         {user? <div className="loginPage">
-          <span>LogOut</span>
+          <span onClick={()=>handleLogout()}>LogOut</span>
           <hr />
         </div> : <div className="loginPage">
           <span>LogIn</span>
