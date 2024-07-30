@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Logo from '../../assets/olx-logo.png';
 import './Signup.css';
 import {useForm} from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { db } from '../../firebase';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
+import AuthContext from '../../Context/AuthContext';
 
-export default function Signup() {
+
+export default  function Signup() {
  
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
   const [phone,setPhone] = useState("")
+  const [password,setPassword] = useState("")
   const {register , handleSubmit , formState:{errors}} = useForm()
- 
+  const navigate = useNavigate()
 
- function  onFormSubmit(data){
-    console.log(data);
+  const { user, signUp } = useContext(AuthContext);
+  console.log(user);
+ async function  onFormSubmit(data,e){
     setName(data.name)
     setEmail(data.email)
     setPhone(data.phone)
-    console.log(name,email,phone)
-  }
-  const navigate = useNavigate()
+    setPassword(data.password)
+    e.preventDefault()
+   let res = await signUp(name, email, phone, password);
+};
+if (user) {
+  navigate("/");
+  return null;
+}
   return (
     <div>
       <div className="signupParentDiv">
@@ -62,7 +73,7 @@ export default function Signup() {
           <small style={{color:"red", display:'block'}}>{errors.password && "need passcode"}</small>
           <br />
           <br />
-          <button>Signup</button>
+          <button type='submit'>Signup</button>
         </form>
         <a onClick={()=>navigate('/login')}>Login</a>
       </div>
