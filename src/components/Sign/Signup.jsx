@@ -18,7 +18,6 @@ export default  function Signup() {
   const navigate = useNavigate()
 
   const { user, signUp } = useContext(AuthContext);
-  console.log(user);
  async function  onFormSubmit(data,e){
     setName(data.name)
     setEmail(data.email)
