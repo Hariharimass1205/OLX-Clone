@@ -34,7 +34,7 @@ if (user) {
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="100px" height="100px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo}></img>
         <form onSubmit={handleSubmit(onFormSubmit)}>
           <label htmlFor="fname">Username</label>
           <br />

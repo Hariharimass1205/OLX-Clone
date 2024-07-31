@@ -12,7 +12,6 @@ function Login() {
   const navigate = useNavigate()
   const {user, logIn}  = useContext(AuthContext)
   async  function formSubmitdata(data,e){
-    console.log(data)
     let email = data.email
     let password = data.password
     let {success} = await logIn(email,password)
